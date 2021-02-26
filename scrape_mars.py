@@ -6,6 +6,8 @@ import requests
 import pymongo
 import datetime as dt
 
+mars_info={}
+
 def scrape_all():
     # Initiate headless driver for deployment
     browser = Browser("chrome", executable_path="chromedriver", headless=True)
