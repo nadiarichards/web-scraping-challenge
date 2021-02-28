@@ -11,8 +11,8 @@
 <body>
   <div clas="container">
     <div class="jumbotron text-center">
-          <h1>Mission to Mars</h1>
-           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
   </div>
       
@@ -25,5 +25,50 @@
       </div>
     </div>
   </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12" style="width: 600px; height: 600px; overflow: hidden; margin: 10px; position: relative">
+      <h2>Featured Mars Image</h2>
+      <img src="{{ mars.featured_image }}" class="img-fluid" style="position: relative; margin: auto; min-height: 100%; min-width: 100%" alt="Mars Featured Image">
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h2>Mars Facts</h2>
+      <table class="table table-striped">{{ mars.facts|safe }}</table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h2>Mars Hemispheres</h2>
+    </div>
+    <hr>
+  </div>
+</div>
+</br>
+
+<div class="container-fluid padding">
+  <div class="row padding">
+   {% for mars_img in mars.hemispheres %}
+    <div class="col-md-6">
+      <div class="card text-center">
+        <img class="card-img-top" src="{{ mars_img.img_url }}" style="max-width:500px; max-height: auto;">
+        <div class="card-body">
+          <h4 class="card-title">{{mars_img.title}}</h4>
+        </div>
+      </div>
+    </div>
+   {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
+
 </body>
 </html>
