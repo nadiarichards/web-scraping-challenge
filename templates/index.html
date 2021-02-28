@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +16,6 @@
     </div>
   </div>
       
-    <!-- surf data -->
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -27,58 +25,5 @@
       </div>
     </div>
   </div>
-</hr>
-
-<!--- Two Column Section -->
-<div class="container padding">
-  <div class="row padding">
-    <div class="col-lg-8 col-md-8 col-sm-12">
-    <h2>Featured Mars Image</h2>
-    <img src="{{ mars.featured_image }}" class="img-fluid" style="max: width 400px; max-height: auto;" alt="Mars_featured_image">
-
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <h2>Mars Facts </h2>
-      <table class="table striped">{{mars.facts}}</table>
-      <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;"></div>
-      <!-- <h3>Mars Facts</h3> -->
-      <!-- {{ mars.facts|safe }} -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr>
-<!--- Mars Hemispheres -->
-
-<div class="container-fluid padding">
-  <div class="row wewlcome text-center">
-    <div class="col-12">
-      <h2>Mars Hemispheres</h2>
-    </div>
-    <hr class="light">
-  </div>
-</div>
-</br>
-<!--- Cards -->
-<!--- Adding informational cards-->
-<div class="container-fluid padding">
-  <div class="row padding">
-
-   {% for mars_img in mars.hemi_img %}
-    <div class="col-md-6">
-      <div class="card text-center">
-        <img class="card-img-top" src="{{ mars_img.img_url }}" style="max-width:100%; max-height: auto;">
-        <div class="card-body">
-          <h4 class="card-title">{{mars_img.title}}</h4>
-        </div>
-      </div>
-    </div>
-   {% endfor %}
-  </div>
-</div>
-  
-<hr class="light">
-
 </body>
 </html>
