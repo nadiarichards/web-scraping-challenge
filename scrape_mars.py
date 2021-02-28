@@ -52,11 +52,14 @@ def scrape_all():
     links = browser.find_by_css("a.product-item h3")
     for i in range(len(links)):
         hemisphere = {}
+        time.sleep(2)
         browser.find_by_css("a.product-item h3")[i].click()
         sample_elem = browser.links.find_by_text('Sample').first
         hemisphere['img_url'] = sample_elem['href']
         hemisphere['title'] = browser.find_by_css("h2.title").text
         hemisphere_image_urls.append(hemisphere)
+        hemisphere_titles=[sub['title'] for sub in hemisphere_image_urls]
+        hemisphere_urls=[sub['img_url'] for sub in hemisphere_image_urls]
         browser.back()
 
 
@@ -65,16 +68,11 @@ def scrape_all():
         "news_paragraph": news_p,
         "featured_image": featured_image,
         "facts": html_table,
-        "hemisphere_title": hemisphere.title,
-        "hemisphere_url": hemisphere.img_url
+        "hemisphere_title": hemisphere_titles,
+        "hemisphere_urls": hemisphere_urls
     }
 
     # collection.insertOne(data)
     # Stop webdriver and return data
     browser.quit()
     return data
-
-scrape_all()
-
-# DEFINE FUNCTION
-# GO TO CHROMEDRIVER
