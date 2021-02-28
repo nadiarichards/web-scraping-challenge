@@ -65,8 +65,8 @@ def scrape_all():
         "news_paragraph": news_p,
         "featured_image": featured_image,
         "facts": html_table,
-        "henisphere_title": hemisphere_image_urls.title,
-        "hemisphere_url": hemisphere_image_urls.img_url
+        "hemisphere_title": hemisphere.title,
+        "hemisphere_url": hemisphere.img_url
     }
 
     # collection.insertOne(data)
