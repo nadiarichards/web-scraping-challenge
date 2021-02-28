@@ -2,10 +2,10 @@
 
 A full-stack app that scrapes data from 4 different websites containing information about Mars and pulls it into a single website page by the means of Flask app.
 The wesbites used for the scraping are as follows: 
-1. [for news title and paragraph] (https://mars.nasa.gov/news/)
-2. [for latest featured image] (https://www.jpl.nasa.gov/images/)
-3. [for Mars facts table] (https://space-facts.com/mars/)
-4. [for the images and names of each of Mars' hemispheres] (https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
+1. [for news title and paragraph](https://mars.nasa.gov/news/)
+2. [for latest featured image](https://www.jpl.nasa.gov/images/)
+3. [for Mars facts table](https://space-facts.com/mars/)
+4. [for the images and names of each of Mars' hemispheres](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
 
 
 ## Menthods and languages used:
@@ -14,7 +14,7 @@ The wesbites used for the scraping are as follows:
 2. Jupyter Notebook
 3. Pandas for working with an html table
 4. Splinter for navigating the sites
-5. BeautifulSoup for parsing through teh data on the websites
+5. BeautifulSoup for parsing through the data on the websites
 6. MongoDB / MongoDB Compass for storing the scraped data
 7. HTML and CSS for writing the code for the webpage
 
