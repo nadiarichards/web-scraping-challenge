@@ -16,25 +16,23 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
-    <h2>Latest Mars News</h2>
-    <h3>How NASA's Mars Helicopter Will Reach the Red Planet's Surface</h3>
-    <p><h4>The small craft will seek to prove that powered, controlled flight is possible to another planet. But just getting it onto the surface of Mars willtake a whole lot of ingenuity.</h4></p>
-    <h1>{{ mars.news_paragraph }}</h1>
-  </div>
-
-  <div class="container">
     <div class="row">
-      <div class="col-lg-7 col-md-12">
-        <!-- Left Box -->
-        <div class="box">
-          <h3>Featured Mars Image</h3>
-          <img src="{{ mars.featured_img }}" alt="Mars__featured_image">
-          <!-- <img src="images/Fig1.png" class="Visualization rounded float-left" alt="Max Temperature Graph">
-          </p> -->
-        </div>
+      <div class="col-md-8 col-md-offset-2">
+        <img src= {{ mars.hemisphere_urls }} />
+        <h3>Santa Barbara Surf Report</h3>
+        <p>{{ mars.featured_image }}</p>
       </div>
     </div>
+
+    <div class="row">
+      <h2>Latest Mars News</h2>
+      <h3>How NASA's Mars Helicopter Will Reach the Red Planet's Surface</h3>
+      <p><h4>The small craft will seek to prove that powered, controlled flight is possible to another planet. But just getting it onto the surface of Mars willtake a whole lot of ingenuity.</h4></p>
+      <h1>{{ mars.news_paragraph }}</h1>
+    </div>
   </div>
+
+  
 
 
 <footer>
