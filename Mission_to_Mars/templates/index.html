@@ -14,12 +14,12 @@
     <div class="jumbotron text-center">
       <h1>Mission To Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
-      <h1>{{ text }}</h1>
     </div>
 
     <h2>Latest Mars News</h2>
     <h3>How NASA's Mars Helicopter Will Reach the Red Planet's Surface</h3>
-    <p><h4><em>The small craft will seek to prove that powered, controlled flight is possible to another planet. But just getting it onto the surface of Mars willtake a whole lot of ingenuity.</em></h4></p>
+    <p><h4>The small craft will seek to prove that powered, controlled flight is possible to another planet. But just getting it onto the surface of Mars willtake a whole lot of ingenuity.</h4></p>
+    <h1>{{ mars.news_paragraph }}</h1>
   </div>
 
   <div class="container">
@@ -28,48 +28,9 @@
         <!-- Left Box -->
         <div class="box">
           <h3>Featured Mars Image</h3>
-          <hr>
-          <img src="images/Fig1.png" class="Visualization rounded float-left" alt="Max Temperature Graph">
-          <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To
-            accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over
-            500 cities.</p>
-          <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
-            Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the
-            source data and visualizations created as part of the analysis, as well as explanations and descriptions of
-            any trends and correlations witnessed.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-12">
-        <!-- Right Box -->
-        <div class="box">
-          <h5 class="title">Visualizations</h5>
-          <hr>
-
-          <div class="container">
-            <div class="row" style="padding-bottom: 30px;">
-              <div class="col-6">
-                <a href="max_temp.html">
-                  <img class="panel" src="images/Fig1.png" alt="Max Temperature Image">
-                </a>
-              </div>
-              <div class="col-6">
-                <a href="humidity.html">
-                  <img class="panel" src="images/Fig2.png" alt="Humidity Graph">
-                </a>
-              </div>
-            <div class="col-6">
-              <a href="cloudiness.html">
-                <img class="panel" src="images/Fig3.png" alt="Cloudiness Graph">
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="wind_speed.html">
-                <img class="panel" src="images/Fig4.png" alt="Wind Speed Graph">
-              </a>
-            </div>
-            </div>
-          </div>
+          <img src="{{ mars.featured_img }}" alt="Mars__featured_image">
+          <!-- <img src="images/Fig1.png" class="Visualization rounded float-left" alt="Max Temperature Graph">
+          </p> -->
         </div>
       </div>
     </div>
@@ -77,10 +38,8 @@
 
 
 <footer>
-  <div class="footer">&copy; Copyright Coding Bootcamp 2020 </div>
+  <div class="footer">&copy; Copyright Coding Bootcamp 2021 </div>
 </footer>
-
-<!-- Bootstrap JS -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

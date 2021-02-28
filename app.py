@@ -21,6 +21,7 @@ def scrape():
     mars_data=scrape_mars.scrape_all()
     mars.update({}, mars_data, upsert=True)
     return "Successful"
+    return redirect("/")
     
 if __name__ == "__main__":
     app.run()
