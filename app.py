@@ -1,13 +1,9 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 import scrape_mars
-# from scrape_mars import scrape_all
 import time
 
 app = Flask(__name__)
-
-# app.config["MONGO_URI"]="mongodb://localhost:27017/mars_app"
-# mongo=PyMongo(app)
 
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 

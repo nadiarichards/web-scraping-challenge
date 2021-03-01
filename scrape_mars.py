@@ -6,13 +6,6 @@ import requests
 import pymongo
 import time
 
-# conn = 'mongodb://localhost:27017'
-# client = pymongo.MongoClient(conn)
-# db = mars_data_db
-# time_delay = randint(3,6)
-
-# collection.insertOne(data)
-
 def scrape_all():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
@@ -73,7 +66,5 @@ def scrape_all():
         "hemispheres": hemisphere_image_urls
     }
 
-    # collection.insertOne(data)
-    # Stop webdriver and return data
     browser.quit()
     return data
