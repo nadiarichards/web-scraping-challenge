@@ -33,9 +33,13 @@
       <img src="{{ mars.featured_image }}" class="img-fluid" style="position: relative; margin: auto; min-height: 100%; min-width: 100%" alt="Mars Featured Image">
     </div>
 
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <h2>Mars Facts</h2>
-      {{ mars.facts|safe }}
+    <div class="col-md-4">
+      <div class="row" id="mars-facts">
+        <h4>Mars Facts</h4>
+        <table class = "table table-striped">
+        {{ mars.facts | safe }}
+        </table>
+      </div>
       </div>
     </div>
   </div>
@@ -57,7 +61,7 @@
    {% for mars_img in mars.hemispheres %}
     <div class="col-md-6">
       <div class="card text-center">
-        <img class="card-img-top" src="{{ mars_img.img_url }}" style="max-width:500px; max-height: auto;">
+        <img class="card-img-top" src="{{ mars_img.img_url }}" style="max-width:600px; max-height: auto;">
         <div class="card-body">
           <h4 class="card-title">{{mars_img.title}}</h4>
         </div>
